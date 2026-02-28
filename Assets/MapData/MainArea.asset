@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb2c07f682a22d409b4678cdd54bb14, type: 3}
+  m_Name: MainArea
+  m_EditorClassIdentifier: Assembly-CSharp::GameMap
+  prefab: {fileID: 5439187717029855851, guid: 65ff9221e1fb46045b150c16ab750d77, type: 3}
+  mapName: MainArea
+  mapID: 0
+  entryPoints:
+  - entryPointID: 0
+    cell: {x: -3, y: -2, z: 0}
+  - entryPointID: 1
+    cell: {x: -8, y: 3, z: 0}
+  - entryPointID: 2
+    cell: {x: -3, y: 8, z: 0}
+  - entryPointID: 3
+    cell: {x: 2, y: 3, z: 0}

@@ -1,0 +1,89 @@
+{
+    "mapStates": [
+        {
+            "mapID": 0,
+            "enemyStates": [],
+            "treasureStates": []
+        },
+        {
+            "mapID": 1,
+            "enemyStates": [],
+            "treasureStates": []
+        },
+        {
+            "mapID": 2,
+            "enemyStates": [
+                {
+                    "enemyID": 1,
+                    "currentHP": 8,
+                    "maxHP": 8
+                },
+                {
+                    "enemyID": 0,
+                    "currentHP": 5,
+                    "maxHP": 5
+                }
+            ],
+            "treasureStates": [
+                {
+                    "treasureID": 0,
+                    "collected": true
+                },
+                {
+                    "treasureID": 1,
+                    "collected": true
+                }
+            ]
+        },
+        {
+            "mapID": 3,
+            "enemyStates": [
+                {
+                    "enemyID": 1,
+                    "currentHP": 8,
+                    "maxHP": 8
+                },
+                {
+                    "enemyID": 0,
+                    "currentHP": 5,
+                    "maxHP": 5
+                }
+            ],
+            "treasureStates": [
+                {
+                    "treasureID": 0,
+                    "collected": false
+                },
+                {
+                    "treasureID": 1,
+                    "collected": false
+                }
+            ]
+        },
+        {
+            "mapID": 4,
+            "enemyStates": [
+                {
+                    "enemyID": 1,
+                    "currentHP": 8,
+                    "maxHP": 8
+                },
+                {
+                    "enemyID": 0,
+                    "currentHP": 5,
+                    "maxHP": 5
+                }
+            ],
+            "treasureStates": [
+                {
+                    "treasureID": 0,
+                    "collected": false
+                },
+                {
+                    "treasureID": 1,
+                    "collected": false
+                }
+            ]
+        }
+    ]
+}
