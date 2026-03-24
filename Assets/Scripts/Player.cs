@@ -11,13 +11,14 @@ public class Player : MonoBehaviour
     public int collectedGold;
     [SerializeField] TMP_Text healthUI;
     [SerializeField] TMP_Text goldUI;
-    [SerializeField] public InputAction attackAction, pauseAction;
+    [SerializeField] public InputAction attackAction, pauseAction, inventoryAction;
     public List<Enemy> enemies = new List<Enemy>();
     public float attackDelay;
     public int deathTargetMap;
     public int deathTargetEntryPoint;
-    [SerializeField] GameObject pauseMenu, instructionPanel, infoPanel, screenFader;
-    bool paused;
+    [SerializeField] GameObject pauseMenu, instructionPanel, infoPanel, screenFader, inventory;
+    bool paused, inventoryOpen;
+    [SerializeField] InventoryManager inventoryManager;
 
     void Awake()
     {
@@ -26,18 +27,21 @@ public class Player : MonoBehaviour
         healthUI.text = $"{playerHealth}";
         goldUI.text = $"{collectedGold}";
         paused = false;
+        inventoryOpen = false;
         pauseMenu.SetActive(false);
         instructionPanel.SetActive(true);
         infoPanel.SetActive(true);
+        inventory.SetActive(false);
     }
 
     void Start()
     {
         pauseAction.Enable();
         attackAction.Enable();
+        inventoryAction.Enable();
         attackAction.performed += AttackInput;
         pauseAction.performed += Pause;
-        
+        inventoryAction.performed += Inventory;
     }
 
     void Update()
@@ -83,6 +87,27 @@ public class Player : MonoBehaviour
         if (context.performed)
         {
             Attack();
+        }
+    }
+
+    public void Inventory(InputAction.CallbackContext context)
+    {
+        if (!inventoryOpen)
+        {
+            inventory.SetActive(true);
+            inventory.GetComponent<InventoryUIController>().UpdateUI(inventoryManager.inventory);
+            Time.timeScale = 0;
+            inventoryOpen = true;
+            screenFader.SetActive(false);
+            attackAction.Disable();
+        }
+        else
+        {
+            inventoryOpen = false;
+            Time.timeScale = 1;
+            inventory.SetActive(false);
+            screenFader.SetActive(true);
+            attackAction.Enable();
         }
     }
 

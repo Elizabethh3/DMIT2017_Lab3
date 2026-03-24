@@ -52,11 +52,11 @@
             "treasureStates": [
                 {
                     "treasureID": 0,
-                    "collected": false
+                    "collected": true
                 },
                 {
                     "treasureID": 1,
-                    "collected": false
+                    "collected": true
                 }
             ]
         },

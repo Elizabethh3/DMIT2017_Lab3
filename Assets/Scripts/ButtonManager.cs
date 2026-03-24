@@ -6,6 +6,7 @@ public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject startMenu;
     [SerializeField] GameObject screenFader;
+    [SerializeField] GameObject containerScreen;
 
     void Awake()
     {
@@ -39,5 +40,15 @@ public class ButtonManager : MonoBehaviour
         //saves current gameplay and then closes application
         GameStateManager.Instance.GetComponentInChildren<JSonSaving>().SaveData();
         Application.Quit();
+    }
+
+    public void OnClickDone()
+    {
+        ContainerUI containerUI = FindAnyObjectByType<ContainerUI>();
+        containerUI.container = null;
+        containerScreen.SetActive(false);
+        screenFader.SetActive(true);
+        containerUI.UnDrawUI();
+        //when done interacting with container
     }
 }

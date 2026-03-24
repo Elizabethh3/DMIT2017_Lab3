@@ -249,6 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Treasure
   treasureID: 0
   numCoins: 7
+  collected: 0
   interact:
     m_Name: Interact
     m_Type: 0
@@ -40613,6 +40614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Treasure
   treasureID: 1
   numCoins: 4
+  collected: 0
   interact:
     m_Name: Interact
     m_Type: 0

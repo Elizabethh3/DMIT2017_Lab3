@@ -213,6 +213,7 @@ MonoBehaviour:
   sightline: {fileID: 1148236199702778280}
   attackRange: {fileID: 6054606728049137974}
   patrolRange: {x: 3, y: 3}
+  containerPrefab: {fileID: 723278308661057952, guid: ba6784733d5c4424fb243c355037e53c, type: 3}
 --- !u!114 &9055198306861666601
 MonoBehaviour:
   m_ObjectHideFlags: 0

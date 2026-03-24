@@ -13,7 +13,6 @@ public class Treasure : MonoBehaviour
     void Awake()
     {
         player = FindAnyObjectByType<Player>();
-        
     }
     void Start()
     {
